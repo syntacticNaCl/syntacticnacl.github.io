@@ -1,31 +1,22 @@
-.terminal-wrap {
+.cmd, .cmd div, .cmd span, .terminal, .terminal-output > :not(.raw) a, .terminal-output > :not(.raw) div, .terminal-output > :not(.raw) span {
+    background: $dark-green;
 }
 
-@media only screen and (min-width: 769px) {
-    .terminal-wrap {
-        margin: 0 auto;
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .terminal-wrap {
-        margin: 0 auto;
-        width: 100%;
-    }
+.cmd, .cmd div, .cmd span[data-text]:not(.cmd-inverted):not(.token):not(.emoji), .terminal, .terminal-output > :not(.raw) a, .terminal-output > :not(.raw) div, .terminal-output > :not(.raw) span[data-text]:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji) {
+    background: $dark-green;
 }
 
 .terminal {
     height: 450px;
     overflow: hidden;
-    background: $dark-grey;
+    background: $dark-green;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-
 .terminal-top-border {
-    background: $dark-green;
+    background: $dark-grey;
+    color: $lighter-green;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding-top: 10px;
@@ -34,8 +25,13 @@
     align-self: center;
 }
 
-.prompt {
-    // color: green;
+.terminal-wrap {
+    margin: 0 auto;
+    width: 40%;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 @keyframes blink {

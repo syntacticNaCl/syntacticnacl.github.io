@@ -117,7 +117,13 @@ jQuery(function($){
             this.echo();
         },
 
-    }, {prompt:'[syntacticnacl@valinor]$ ', greetings: function(){this.echo('');}, completion: true});
+    }, {
+        prompt:'[syntacticnacl@valinor]$ ',
+        greetings: function() {
+            this.echo('');
+        },
+        completion: true
+    });
 
 });
 

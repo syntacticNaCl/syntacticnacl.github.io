@@ -1,13 +1,17 @@
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
     font-family: $ubuntu;
-    color: $dark-grey;
+    color: $dark-green;
 }
 
 .signature a {
+    color: $orange;
     font-size: 34px;
-    font-family: 'Rock Salt', cursive;
+    font-family: $rock-salt;
     margin-left: 10px;
     text-decoration: none;
+    &:hover {
+        color: $light-green;
+    }
 }
 
 a {

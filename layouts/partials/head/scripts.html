@@ -1,0 +1,7 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
+
+{{ $mainJs := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint }}
+<script type="text/javascript" src="{{ $mainJs.RelPermalink }}" defer></script>
+
+{{ template "_internal/google_analytics.html" . }}
