@@ -1,0 +1,19 @@
+h1, h2, h3, h4, h5 {
+    font-family: $ubuntu;
+    color: $dark-grey;
+}
+
+.signature a {
+    font-size: 34px;
+    font-family: 'Rock Salt', cursive;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+a {
+    color: $dark-green;
+    text-decoration: underline;
+    &:hover {
+        color: $dark-grey;
+    }
+}
