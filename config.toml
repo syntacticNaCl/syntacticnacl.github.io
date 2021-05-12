@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 title = "syntacticNaCl | Hi"
 languageCode = "en-us"
 paginate = 5
+publishDir="docs"
 
 [params]
   # dir name of your blog content (default is `content/posts`).
