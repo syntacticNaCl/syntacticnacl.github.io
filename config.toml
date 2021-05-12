@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://syntacticnacl.github.io/"
 title = "syntacticNaCl | Hi"
 languageCode = "en-us"
 paginate = 5
