@@ -76,7 +76,7 @@ jQuery(function($){
             this.echo(manPage(cmd));
         },
         credits: function() {
-            this.echo('Built with ' + colorText('Jquery Terminal Emulator') + ' by ' + colorText('Jakub Jankiewicz') + ': http://terminal.jcubic.pl', {keepWords: true});
+            this.echo('Built with ' + colorText('Jquery Terminal Emulator') + ' by ' + colorText('Jakub Jankiewicz') + ': https://terminal.jcubic.pl', {keepWords: true});
         },
         github: function() {
             this.echo("Opening github...");
