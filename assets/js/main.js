@@ -28,10 +28,10 @@ jQuery(function($){
             this.echo('\tFreenode IRC: ' + colorText('syntacticNaCl'));
         },
         work: function() {
-            this.echo('I did software support for 3.5 years while I was in school. I then worked as a consultant and software engineer at Atcore Systems and Sideways8 Interactive, LLC. I am currently a Senior Software Engineer at ShootProof.', {keepWords: true});
+            this.echo('I did software support for 3.5 years while I was in school. I then worked as a consultant and software engineer at Atcore Systems and Sideways8 Interactive, LLC. I am currently a Senior Software Engineer at Foreground.', {keepWords: true});
         },
         whoami: function() {
-            this.echo('Hi, my name is Garrett. I am a hacker, software engineer, musician, gamer, and Tolkien nerd. I enjoy reading, playing table-top games, and building cool things. I am driven by a need to know how and why things work.', {keepWords: true});
+            this.echo('Hi, my name is Garrett. I am passionate about the topics of cryptography, privacy, and blockchain technologies and their practical applications in today’s technology infused world. In my free time, I enjoy playing various table-top games, reading, playing guitar and mandolin, hiking, perusing whitepapers, and playing with obscure *nix operating systems.', {keepWords: true});
         },
         education: function() {
             this.echo('I hold Bachelors degrees in Computer Information Systems and Biopsychology', {keepWords: true});
@@ -43,7 +43,7 @@ jQuery(function($){
             this.echo('Uh uh uh... You didn\'t say the magic word!', {keepWords: true});
         },
         pwd: function() {
-            this.echo('/home/syntacticnacl/code/sites');
+            this.echo('/home/syntacticnacl/code/site');
         },
         '': function() {
             this.echo();
@@ -61,10 +61,17 @@ jQuery(function($){
         tools: function() {
             this.echo('Hardware');
             this.echo('\t' + colorText('System76 Gazelle laptop'));
+            this.echo('\t' + colorText('Ultimate Hacking Keyboard https://ultimatehackingkeyboard.com/'));
             this.echo('Environment');
             this.echo('\t' + colorText('Switch between PopOS and Arch linux at home and OSX at work', {keepWords: true}));
             this.echo('\t' + colorText('Terminator using zsh'));
             this.echo('\t' + colorText('Emacs using evil mode for writing code'));
+        },
+        talks: function() {
+            window.open("/talks","_self");
+        },
+        blog: function() {
+            this.echo('Coming soon...');
         },
         help: function() {
             showHelp(this);
@@ -171,6 +178,9 @@ function showHelp(obj) {
     obj.echo("\t[[g;#c1e1a6;]contact]     get in touch");
     obj.echo("\t[[g;#c1e1a6;]github]      jump over to my github");
     obj.echo("\t[[g;#c1e1a6;]skills]      my skills");
+    obj.echo("\t[[g;#c1e1a6;]tools]       my tools");
+    obj.echo("\t[[g;#c1e1a6;]talks]       my talks");
+    obj.echo("\t[[g;#c1e1a6;]blog]        my blog");
     obj.echo("\t[[g;#c1e1a6;]books]       my favorite books");
     obj.echo("\t[[g;#c1e1a6;]clear]       clear the console");
     obj.echo("\t[[g;#c1e1a6;]help]        this help screen");
@@ -205,6 +215,15 @@ function manPage(cmd) {
         break;
     case 'skills':
         return 'My degree of skill';
+        break;
+    case 'tools':
+        return 'My tools';
+        break;
+    case 'talks':
+        return 'My talks';
+        break;
+    case 'blog':
+        return 'My blog';
         break;
     case 'books':
         return 'Some of the many books I love.';
