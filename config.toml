@@ -1,7 +1,6 @@
 baseURL = "https://syntacticnacl.com/"
 languageCode = "en-us"
 paginate = 5
-publishDir="docs"
 title = "syntacticNaCl.com | Hi, I am syntacticNaCl"
 googleAnalytics="UA-35798055-2"
 copyright = "2021"
