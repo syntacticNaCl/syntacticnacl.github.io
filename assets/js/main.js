@@ -29,12 +29,8 @@ jQuery(function($){
         about: function () {
             window.open("/about","_self");
         },
-        pgp: function (flag) {
-            if (flag == '--download' || flag == '-d') {
-                window.open("/garrett@syntacticnacl.com.asc","_self");
-            } else {
-                window.open("/about","_self");
-            }
+        pgp: function () {
+            window.open("/about","_self");
         },
         work: function() {
             this.echo('I did software support for 3.5 years while I was in school. I have worked as a consultant and software engineer at various companies, including most recently as a senior engineer at Foreground. I am currently an Application Security Engineer at Calendly.', {keepWords: true});
@@ -214,7 +210,7 @@ function manPage(cmd) {
         return 'About me.';
         break;
     case 'pgp':
-        return 'My PGP key (optionally use --download or -d flag to download my key)';
+        return 'My PGP public key';
         break;
     case 'contact':
         return 'If you need to get in touch with me.';
