@@ -22,16 +22,25 @@ jQuery(function($){
         },
         contact: function() {
             this.echo('Contact me at:');
-            this.echo('\tEmail: garrett@syntacticnacl.com');
+            this.echo('\tEmail: garrett@syntacticnacl.com (type pgp for my public key)');
             this.echo('\tTwitter: ' + colorText('@syntacticNaCl'));
-            this.echo('\tKeybase: ' + colorText('syntacticNaCl'));
             this.echo('\tFreenode IRC: ' + colorText('syntacticNaCl'));
         },
+        about: function () {
+            window.open("/about","_self");
+        },
+        pgp: function (flag) {
+            if (flag == '--download' || flag == '-d') {
+                window.open("/garrett@syntacticnacl.com.asc","_self");
+            } else {
+                window.open("/about","_self");
+            }
+        },
         work: function() {
-            this.echo('I did software support for 3.5 years while I was in school. I then worked as a consultant and software engineer at Atcore Systems and Sideways8 Interactive, LLC. I am currently a Senior Software Engineer at Foreground.', {keepWords: true});
+            this.echo('I did software support for 3.5 years while I was in school. I have worked as a consultant and software engineer at various companies, including most recently as a senior engineer at Foreground. I am currently an Application Security Engineer at Calendly.', {keepWords: true});
         },
         whoami: function() {
-            this.echo('Hi, my name is Garrett. I am passionate about the topics of cryptography, privacy, and blockchain technologies and their practical applications in today’s technology infused world. In my free time, I enjoy playing various table-top games, reading, playing guitar and mandolin, hiking, perusing whitepapers, and playing with obscure *nix operating systems.', {keepWords: true});
+            this.echo('Hi, my name is Garrett. I am passionate about the topics of cryptography, privacy, and blockchain technologies and their practical applications in today’s technology infused world. In my free time, I enjoy playing various tabletop games, reading, playing guitar and mandolin, hiking, perusing whitepapers, and playing with obscure *nix operating systems.', {keepWords: true});
         },
         education: function() {
             this.echo('I hold Bachelors degrees in Computer Information Systems and Biopsychology', {keepWords: true});
@@ -43,7 +52,7 @@ jQuery(function($){
             this.echo('Uh uh uh... You didn\'t say the magic word!', {keepWords: true});
         },
         pwd: function() {
-            this.echo('/home/syntacticnacl/code/site');
+            this.echo('/home/syntacticnacl/code/syntacticnal.github.io');
         },
         '': function() {
             this.echo();
@@ -104,7 +113,7 @@ jQuery(function($){
             this.echo();
             this.echo('Databases');
             this.echo();
-            this.echo("\t" + colorText('MySQL') + "                 " + colorLine('high-medium'));
+            this.echo("\t" + colorText('MySQL') + "                 " + colorLine('high'));
             this.echo("\t" + colorText('MSSQL') + "                 " + colorLine('high-medium'));
             this.echo();
             this.echo("Frameworks and Libraries");
@@ -200,6 +209,12 @@ function manPage(cmd) {
         break;
     case 'whoami':
         return 'A little bit about me.';
+        break;
+    case 'about':
+        return 'About me.';
+        break;
+    case 'pgp':
+        return 'My PGP key (optionally use --download or -d flag to download my key)';
         break;
     case 'contact':
         return 'If you need to get in touch with me.';
