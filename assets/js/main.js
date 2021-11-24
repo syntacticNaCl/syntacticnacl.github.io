@@ -42,7 +42,7 @@ jQuery(function($){
             this.echo('I hold Bachelors degrees in Computer Information Systems and Biopsychology', {keepWords: true});
         },
         '\n': function() {
-            this.echo();
+            this.echo('');
         },
         passwd: function() {
             this.echo('Uh uh uh... You didn\'t say the magic word!', {keepWords: true});
@@ -51,7 +51,7 @@ jQuery(function($){
             this.echo('/home/syntacticnacl/code/syntacticnal.github.io');
         },
         '': function() {
-            this.echo();
+            this.echo('');
         },
         books: function() {
             this.echo('Books I like:');
@@ -95,9 +95,9 @@ jQuery(function($){
             window.open("https://github.com/syntacticnacl","_self");
         },
         skills: function(){
-            this.echo();
+            this.echo('');
             this.echo('Languages');
-            this.echo();
+            this.echo('');
             this.echo("\t" + colorText('PHP') + "                   " + colorLine('high'));
             this.echo("\t" + colorText('Golang') + "                " + colorLine('medium'));
             this.echo("\t" + colorText('Sass/Less') + "             " + colorLine('high'));
@@ -106,34 +106,32 @@ jQuery(function($){
             this.echo("\t" + colorText('Python') + "                " + colorLine('high'));
             this.echo("\t" + colorText('Java') + "                  " + colorLine('low'));
             this.echo("\t" + colorText('C++') + "                   " + colorLine('low'));
-            this.echo();
+            this.echo('');
             this.echo('Databases');
-            this.echo();
+            this.echo('');
             this.echo("\t" + colorText('MySQL') + "                 " + colorLine('high'));
             this.echo("\t" + colorText('MSSQL') + "                 " + colorLine('high-medium'));
-            this.echo();
+            this.echo('');
             this.echo("Frameworks and Libraries");
-            this.echo();
+            this.echo('');
             this.echo("\t" + colorText('Laravel') + "               " + colorLine('high-medium'));
             this.echo("\t" + colorText('React') + "                 " + colorLine('high'));
             this.echo("\t" + colorText('Falcon') + "                " + colorLine('high'));
             this.echo("\t" + colorText('Django') + "                " + colorLine('medium-low'));
             this.echo("\t" + colorText('Node.js') + "               " + colorLine('high-medium'));
-            this.echo();
+            this.echo('');
             this.echo("Other");
-            this.echo();
+            this.echo('');
             this.echo("\t" + colorText('Linux') + "                 " + colorLine('high'));
             this.echo("\t" + colorText('Puppet') + "                " + colorLine('medium'));
             this.echo("\t" + colorText('Jenkins') + "               " + colorLine('medium'));
             this.echo("\t" + colorText('Ansible') + "               " + colorLine('high'));
-            this.echo();
+            this.echo('');
         },
 
     }, {
         prompt:'[syntacticnacl@valinor]$ ',
-        greetings: function() {
-            this.echo('');
-        },
+        greetings: "",
         completion: true
     });
 
