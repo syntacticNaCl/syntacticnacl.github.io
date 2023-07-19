@@ -1,7 +1,7 @@
 baseURL = "https://syntacticnacl.com/"
 languageCode = "en-us"
 paginate = 5
-copyright = "2021"
+copyright = "2023"
 isMultilingual           = false
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
@@ -16,11 +16,11 @@ publishDir               = "docs/"
     footerText           = "Call me Sam, a theme for Hugo."
 
 # Metadata for Open Graph and Twitter
-    description          = "Hi, I am Garrett (aka syntacticNaCl). I am a software engineer who loves to tinker, play table-top games, read, and break things"               # Max 160 characters show in search results
+    description          = "Hi, I am Garrett (aka syntacticNaCl). I am a hacker and software engineer who loves to tinker, play table-top games, read, and break things"               # Max 160 characters show in search results
     images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
     title                = "syntacticnacl.com | Hi, I am syntacticNaCl"
     keywords             = "syntacticNaCl, engineer, hacker, terminal, table-top, software, web"
-    copyright            = "2021"
+    copyright            = "2023"
     # rss                = ""
 
 [[params.mainMenu]]

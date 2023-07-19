@@ -1,20 +1,20 @@
 "use strict";
 
-jQuery(function($){
+jQuery(function($) {
 
     $('#terminal').terminal({
         calc: {
             add: function(a, b) {
-                this.echo (a + b);
+                this.echo(a + b);
             },
             sub: function(a, b) {
-                this.echo (a - b);
+                this.echo(a - b);
             },
             divide: function(a, b) {
-                this.echo (a / b);
+                this.echo(a / b);
             },
             multiply: function(a, b) {
-                this.echo (a * b);
+                this.echo(a * b);
             },
         },
         ls: function() {
@@ -26,14 +26,14 @@ jQuery(function($){
             this.echo('\tTwitter: ' + colorText('@syntacticNaCl'));
             this.echo('\tFreenode IRC: ' + colorText('syntacticNaCl'));
         },
-        about: function () {
-            window.open("/about","_self");
+        about: function() {
+            window.open("/about", "_self", "rel=noopener noreferrer");
         },
-        pgp: function () {
-            window.open("/about","_self");
+        pgp: function() {
+            window.open("/about", "_self");
         },
         work: function() {
-            this.echo('I did software support for 3.5 years while I was in school. I have worked as a consultant and software engineer at various companies, including most recently as a senior engineer at Foreground. I am currently an Application Security Engineer at Calendly.', {keepWords: true});
+            this.echo('I did software support for 3.5 years while I was in school. I have worked as a consultant and software engineer at various companies, including most recently as a senior engineer at Foreground. I am currently a Senior Product Security Engineer at Calendly.', {keepWords: true});
         },
         whoami: function() {
             this.echo('Hi, my name is Garrett. I am passionate about the topics of cryptography, privacy, and blockchain technologies and their practical applications in today’s technology infused world. In my free time, I enjoy playing various tabletop games, reading, playing guitar and mandolin, hiking, perusing whitepapers, and playing with obscure *nix operating systems.', {keepWords: true});
@@ -48,34 +48,29 @@ jQuery(function($){
             this.echo('Uh uh uh... You didn\'t say the magic word!', {keepWords: true});
         },
         pwd: function() {
-            this.echo('/home/syntacticnacl/code/syntacticnal.github.io');
+            this.echo('/home/syntacticnacl/code/syntacticnacl.github.io');
         },
         '': function() {
             this.echo('');
         },
         books: function() {
-            this.echo('Books I like:');
-            this.echo('\t' + colorText('The Lord of the Rings Trilogy'));
-            this.echo('\t' + colorText('The Hobbit'));
-            this.echo('\t' + colorText('The Silmarillion'));
-            this.echo('\t' + colorText('Area X: The Southern Reach Trilogy'));
-            this.echo('\t' + colorText('The Library at Mount Char'));
-            this.echo('\t' + colorText('The Wheel of Time series'));
-            this.echo('\t' + colorText('Anything cyberpunk'));
+            this.echo('What I am reading: https://www.goodreads.com/user/show/75517564-garrett');
         },
         tools: function() {
             this.echo('Hardware');
-            this.echo('\t' + colorText('System76 Gazelle laptop'));
+            this.echo('\t' + colorText('13-inch Macbook Pro'));
             this.echo('\t' + colorText('Ultimate Hacking Keyboard https://ultimatehackingkeyboard.com/'));
             this.echo('Environment');
-            this.echo('\t' + colorText('Switch between PopOS and Arch linux at home and OSX at work', {keepWords: true}));
-            this.echo('\t' + colorText('Terminator using zsh'));
-            this.echo('\t' + colorText('Emacs using evil mode for writing code'));
+            this.echo('\t' + colorText('Iterm using zsh'));
+            this.echo('\t' + colorText('Emacs w/ evil mode'));
         },
         talks: function() {
-            window.open("/talks","_self");
+            this.echo("Opening talks...");
+            window.open("/talks", "_self");
         },
         blog: function() {
+            this.echo("Opening blog...");
+            // window.open("/posts", "_self");
             this.echo('Coming soon...');
         },
         help: function() {
@@ -92,45 +87,11 @@ jQuery(function($){
         },
         github: function() {
             this.echo("Opening github...");
-            window.open("https://github.com/syntacticnacl","_self");
-        },
-        skills: function(){
-            this.echo('');
-            this.echo('Languages');
-            this.echo('');
-            this.echo("\t" + colorText('PHP') + "                   " + colorLine('high'));
-            this.echo("\t" + colorText('Golang') + "                " + colorLine('medium'));
-            this.echo("\t" + colorText('Sass/Less') + "             " + colorLine('high'));
-            this.echo("\t" + colorText('HTML/CSS') + "              " + colorLine('high'));
-            this.echo("\t" + colorText('JavaScript') + "            " + colorLine('high'));
-            this.echo("\t" + colorText('Python') + "                " + colorLine('high'));
-            this.echo("\t" + colorText('Java') + "                  " + colorLine('low'));
-            this.echo("\t" + colorText('C++') + "                   " + colorLine('low'));
-            this.echo('');
-            this.echo('Databases');
-            this.echo('');
-            this.echo("\t" + colorText('MySQL') + "                 " + colorLine('high'));
-            this.echo("\t" + colorText('MSSQL') + "                 " + colorLine('high-medium'));
-            this.echo('');
-            this.echo("Frameworks and Libraries");
-            this.echo('');
-            this.echo("\t" + colorText('Laravel') + "               " + colorLine('high-medium'));
-            this.echo("\t" + colorText('React') + "                 " + colorLine('high'));
-            this.echo("\t" + colorText('Falcon') + "                " + colorLine('high'));
-            this.echo("\t" + colorText('Django') + "                " + colorLine('medium-low'));
-            this.echo("\t" + colorText('Node.js') + "               " + colorLine('high-medium'));
-            this.echo('');
-            this.echo("Other");
-            this.echo('');
-            this.echo("\t" + colorText('Linux') + "                 " + colorLine('high'));
-            this.echo("\t" + colorText('Puppet') + "                " + colorLine('medium'));
-            this.echo("\t" + colorText('Jenkins') + "               " + colorLine('medium'));
-            this.echo("\t" + colorText('Ansible') + "               " + colorLine('high'));
-            this.echo('');
+            window.open("https:github.com/syntacticnacl", "_self", "rel=noopener noreferrer");
         },
 
     }, {
-        prompt:'[syntacticnacl@valinor]$ ',
+        prompt: '[syntacticnacl@valinor]$ ',
         greetings: "",
         completion: true
     });
@@ -148,25 +109,24 @@ function colorText(text) {
  * Handles skills output
  */
 function colorLine(level) {
-    switch(level) {
-    case 'high':
-        return "##[[g;#00de12;]#################################################]  ##";
-        break;
-    case 'high-medium':
-        return "##[[g;#42d100;]########################################]           ##";
-        break;
-    case 'medium':
-        return "##[[g;#d1b900;]#############################]                      ##";
-        break;
-    case 'medium-low':
-        return "##[[g;#b2d100;]######################]                             ##";
-        break;
-    case 'low':
-        return "##[[g;#d13f00;]#########]                                          ##";
-        break;
-    default:
-        break;
-
+    switch (level) {
+        case 'high':
+            return "##[[g;#00de12;]#################################################]  ##";
+            break;
+        case 'high-medium':
+            return "##[[g;#42d100;]########################################]           ##";
+            break;
+        case 'medium':
+            return "##[[g;#d1b900;]#############################]                      ##";
+            break;
+        case 'medium-low':
+            return "##[[g;#b2d100;]######################]                             ##";
+            break;
+        case 'low':
+            return "##[[g;#d13f00;]#########]                                          ##";
+            break;
+        default:
+            break;
     }
 }
 
@@ -180,7 +140,6 @@ function showHelp(obj) {
     obj.echo("\t[[g;#c1e1a6;]whoami]      display a short bio");
     obj.echo("\t[[g;#c1e1a6;]contact]     get in touch");
     obj.echo("\t[[g;#c1e1a6;]github]      jump over to my github");
-    obj.echo("\t[[g;#c1e1a6;]skills]      my skills");
     obj.echo("\t[[g;#c1e1a6;]tools]       my tools");
     obj.echo("\t[[g;#c1e1a6;]talks]       my talks");
     obj.echo("\t[[g;#c1e1a6;]blog]        my blog");
@@ -197,57 +156,54 @@ function showHelp(obj) {
  * Handles man page output
  */
 function manPage(cmd) {
-    switch(cmd) {
-    case 'credits':
-        return 'About this site.';
-        break;
-    case 'whoami':
-        return 'A little bit about me.';
-        break;
-    case 'about':
-        return 'About me.';
-        break;
-    case 'pgp':
-        return 'My PGP public key';
-        break;
-    case 'contact':
-        return 'If you need to get in touch with me.';
-        break;
-    case 'github':
-        return 'Navigates to my github profile.';
-        break;
-    case 'clear':
-        return 'Clears the screen.';
-        break;
-    case 'help':
-        return 'All of the available commands.';
-        break;
-    case 'skills':
-        return 'My degree of skill';
-        break;
-    case 'tools':
-        return 'My tools';
-        break;
-    case 'talks':
-        return 'My talks';
-        break;
-    case 'blog':
-        return 'My blog';
-        break;
-    case 'books':
-        return 'Some of the many books I love.';
-        break;
-    case 'education':
-        return 'Information about my education.';
-        break;
-    case 'work':
-        return 'A little bit about my work history.';
-        break;
-    case 'calc':
-        return 'Perform basic mathematical calculations.';
-        break;
-    default:
-        return 'No manual entry for ' + cmd;
-        break;
+    switch (cmd) {
+        case 'credits':
+            return 'About this site.';
+            break;
+        case 'whoami':
+            return 'A little bit about me.';
+            break;
+        case 'about':
+            return 'About me.';
+            break;
+        case 'pgp':
+            return 'My PGP public key';
+            break;
+        case 'contact':
+            return 'If you need to get in touch with me.';
+            break;
+        case 'github':
+            return 'Navigates to my github profile.';
+            break;
+        case 'clear':
+            return 'Clears the screen.';
+            break;
+        case 'help':
+            return 'All of the available commands.';
+            break;
+        case 'tools':
+            return 'My tools';
+            break;
+        case 'talks':
+            return 'My talks';
+            break;
+        case 'blog':
+            return 'My blog';
+            break;
+        case 'books':
+            return 'Some of the many books I love.';
+            break;
+        case 'education':
+            return 'Information about my education.';
+            break;
+        case 'work':
+            return 'A little bit about my work history.';
+            break;
+        case 'calc':
+            return 'Perform basic mathematical calculations.';
+            break;
+        default:
+            return 'No manual entry for ' + cmd;
+            break;
     }
 }
