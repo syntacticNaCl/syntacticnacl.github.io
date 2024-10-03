@@ -1,7 +1,7 @@
 baseURL = "https://syntacticnacl.com/"
 languageCode = "en-us"
 paginate = 5
-copyright = "2023"
+copyright = "2024"
 isMultilingual           = false
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
@@ -11,7 +11,7 @@ publishDir               = "docs/"
 [params]
     dateform             = "Mon Jan 02, 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
-    favicon              = "sam.ico"
+    favicon              = "favicon.ico"
     homepage             = "home"                           # What to call the home page link, link will not be rendered if empty
     footerText           = "Call me Sam, a theme for Hugo."
 
@@ -20,7 +20,7 @@ publishDir               = "docs/"
     images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
     title                = "syntacticnacl.com | Hi, I am syntacticNaCl"
     keywords             = "syntacticNaCl, engineer, hacker, terminal, table-top, software, web"
-    copyright            = "2023"
+    copyright            = "2024"
     # rss                = ""
 
 [[params.mainMenu]]
