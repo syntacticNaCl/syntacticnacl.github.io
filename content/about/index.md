@@ -4,6 +4,8 @@ title: About
 
 Hi, my name is Garrett. I am passionate about the topics of cryptography, privacy, and blockchain technologies and their practical applications in today’s technology infused world. In my free time, I enjoy playing various table-top games, reading, playing guitar and mandolin, hiking, perusing whitepapers, and playing with obscure \*nix operating systems.
 
+Also in my free time, I do my best to give back to the community. I am currently a DEF CON Demo Labs Goon, Blue Team Village volunteer, open source contributor, and have published a [CVE](https://www.cve.org/CVERecord?id=CVE-2024-8796) in a popular 2FA library.
+
 [Download PGP](/garrett@syntacticnacl.com.asc)
 
 PGP key:
